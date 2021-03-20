@@ -2,12 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- CDN Boostrap Watch -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/materia/bootstrap.min.css">
+    <!-- Main CSS-->
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
     <title>TASKS</title>
 </head>
 <body>
-    <main>
-        <h1>Tareas por hacer en CASA</h1>
+    <main class="container p-4">
+        <h1 class="display-4 text-center mt-4">TASK APP</h1>
+        <div class="row">
+            <div class="col-md-4 offset-md-4 my-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <form action="/create-task" method="POST">
+                            <div class="form-group">
+                              <input type="text" name="content" class="form-control" autofocus>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" >SAVE</button>
+                        </form>
+                    </div>
+                    <div class="card-body"></div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
